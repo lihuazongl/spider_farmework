@@ -1,5 +1,5 @@
 class Response(object):
-    def __init__(self, url, status, params, headers, body):
+    def __init__(self, url, status, params, headers={}, body=None):
 
         self.url = url
         self.status = status # 状态码
