@@ -20,7 +20,7 @@ class Scheduler(object):
 
     def get_request(self):
         """将请求取出"""
-        self.queue.get()
+        return self.queue.get()
 
     def filter_requests(self, request):
         """实现请求去重，如果该请求需要过滤就返回True，不需要过滤返回False"""

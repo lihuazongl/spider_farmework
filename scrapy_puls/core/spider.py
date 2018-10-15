@@ -8,7 +8,7 @@ from ..item import Item
 class Spider(object):
 
     # 起始URL
-    start_urls = 'https//:www.baidu.com'
+    start_urls = 'https://www.baidu.com/'
 
     def start_request(self):
         """
