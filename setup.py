@@ -20,7 +20,7 @@ setup(
     name='scrapy-plus',  # 模块名称
     version=version,
     description='A mini spider framework, like Scrapy',  # 描述
-    packages=find_packages(exclude=[]), # 除了exclude 中的包 都不打包
+    packages=find_packages(exclude=['test_project']), # 除了exclude 中的包 都不打包
     author='LHZ',
     author_email='lihuazongok@outlook.com',
     license='Apache License v2',

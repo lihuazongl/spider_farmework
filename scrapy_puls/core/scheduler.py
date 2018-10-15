@@ -12,7 +12,7 @@ class Scheduler(object):
     """
     def __init__(self):
         # 创建队列， 用于缓存请求
-        self.queue = Queue
+        self.queue = Queue()
 
     def add_request(self, request):
         """把请求对象添加到队列"""

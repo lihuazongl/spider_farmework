@@ -17,4 +17,4 @@ class Downloader(object):
             raise Exception('暂时不支持除POST和GET以外的请求')
 
         # 将resp对象封装 返回
-        return Response(resp.url, status=resp.status_code, body=resp.content)
+        return Response(resp.url, status_code=resp.status_code, body=resp.content)

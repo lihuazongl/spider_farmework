@@ -1,5 +1,5 @@
 class Request(object):
-    def __init__(self, url, method, params, headers, data):
+    def __init__(self, url, method='GET', params={}, headers={}, data={}):
 
         self.url = url
         self.method = method
