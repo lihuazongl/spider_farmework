@@ -55,7 +55,7 @@ class Engine(object):
         # 结束时间
         e = datetime.now()
         logger.info('结束时间: {}'.format(e))
-        logger.info('总耗时: %s' %(s-e).total_seconds())
+        logger.info('总耗时: %s' %(e-s).total_seconds())
 
 
     def __start(self):
