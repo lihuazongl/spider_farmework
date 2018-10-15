@@ -19,6 +19,14 @@ from scrapy_puls.middlewares.spider_middlewares import SpiderMiddleware
 from scrapy_puls.middlewares.downloader_middlewares import DownloaderMiddleware
 
 
+# 导入日志对象
+from ..utils.log import logger
+from datetime import datetime
+
+
+
+
+
 class Engine(object):
     def __init__(self):
         """实例化各个模块"""
@@ -35,7 +43,20 @@ class Engine(object):
 
     def start(self):
         """提供一个接口对外请求引擎的方法start"""
+
+        # 日志记录时间
+        #　启动时间
+        s = datetime.now()
+        logger.info('启动时间：{}'.format(s))
+
+        # 对外方法
         self.__start()
+
+        # 结束时间
+        e = datetime.now()
+        logger.info('结束时间: {}'.format(e))
+        logger.info('总耗时: %s' %(s-e).total_seconds())
+
 
     def __start(self):
         """提供一个私有的启动引擎的方法，用于实现核心逻辑"""
